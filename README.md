@@ -2,6 +2,7 @@
 
 1. Installing Dependencies for UI
 > cd ui
+then
 > npm install
   
 2. Start the UI
