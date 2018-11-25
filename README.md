@@ -5,7 +5,7 @@ $ cd ui
 $ npm install
   
 2. Start the UI
-$ ng serve
+'ng serve'
   
 3. Build jar
 $ maven package
