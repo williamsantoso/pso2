@@ -1,0 +1,65 @@
+<div class="row">
+    <h2 class="custom-title"> Affix List </h2>
+</div>
+
+<div class="row">
+    <mat-table #table [dataSource]="listAffixDS">
+        <ng-container matColumnDef="no">
+            <mat-header-cell *matHeaderCellDef> No </mat-header-cell>>
+            <mat-cell *matCellDef="let element; let i = index"> {{i+1}} </mat-cell>>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>>
+            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>>
+        </ng-container>
+
+        <ng-container matColumnDef="hp">
+            <mat-header-cell *matHeaderCellDef> HP </mat-header-cell>>
+            <mat-cell *matCellDef="let element"> {{element.hp}} </mat-cell>>
+        </ng-container>
+
+        <ng-container matColumnDef="pp">
+            <mat-header-cell *matHeaderCellDef> PP </mat-header-cell>>
+            <mat-cell *matCellDef="let element"> {{element.pp}} </mat-cell>>
+        </ng-container>
+
+        <ng-container matColumnDef="sAtk">
+            <mat-header-cell *matHeaderCellDef> S-ATK </mat-header-cell>>
+            <mat-cell *matCellDef="let element"> {{element.sAtk}} </mat-cell>>
+        </ng-container>
+
+        <ng-container matColumnDef="rAtk">
+            <mat-header-cell *matHeaderCellDef> R-ATK </mat-header-cell>>
+            <mat-cell *matCellDef="let element"> {{element.rAtk}} </mat-cell>>
+        </ng-container>
+
+        <ng-container matColumnDef="tAtk">
+            <mat-header-cell *matHeaderCellDef> T-ATK </mat-header-cell>>
+            <mat-cell *matCellDef="let element"> {{element.tAtk}} </mat-cell>>
+        </ng-container>
+
+        <ng-container matColumnDef="sDef">
+            <mat-header-cell *matHeaderCellDef> S-DEF </mat-header-cell>>
+            <mat-cell *matCellDef="let element"> {{element.sDef}} </mat-cell>>
+        </ng-container>
+
+        <ng-container matColumnDef="rDef">
+            <mat-header-cell *matHeaderCellDef> R-DEF </mat-header-cell>>
+            <mat-cell *matCellDef="let element"> {{element.rDef}} </mat-cell>>
+        </ng-container>
+
+        <ng-container matColumnDef="tDef">
+            <mat-header-cell *matHeaderCellDef> T-DEF </mat-header-cell>>
+            <mat-cell *matCellDef="let element"> {{element.tDef}} </mat-cell>>
+        </ng-container>
+
+        <ng-container matColumnDef="dex">
+            <mat-header-cell *matHeaderCellDef> DEX </mat-header-cell>>
+            <mat-cell *matCellDef="let element"> {{element.dex}} </mat-cell>>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="listAffixDC"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: listAffixDC;"></mat-row>
+    </mat-table>
+</div>
